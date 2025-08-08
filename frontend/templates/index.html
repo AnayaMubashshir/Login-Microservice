@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <p>Hi, welcome to the Registration Page</p>
+    <p>Today is a {{ day_of_week }} </p>
+    <p>The time is {{current_time}}</p>
+    
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <div class="centered">
+        <form action="/submit" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email">
+            <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+    <a href="get_data"><button> View data</button></a>
+    </div>
+</body>
+<style>
+    body{
+        background-color: skyblue;
+    }
+    p {
+        text-align: center;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+    .centered{
+        margin: auto;
+        width:50%;
+        border:3px solid blueviolet;
+        padding: 10px;
+        text-emphasis-color: white;}
+
+</style>
+</html>
